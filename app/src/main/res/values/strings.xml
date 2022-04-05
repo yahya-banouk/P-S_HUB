@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MobApp_Firebase</string>
+    <string name="logout">Logout</string>
+    <string name="register">Register</string>
+    <string name="welcome_you_are_logged_in">Welcome, You are logged in</string>
+    <string name="logOut">logout</string>
+    <string name="register_here">Register here</string>
+    <string name="not_registered_yet">Not registered yet</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvRegisterHere" type="id" />
+    <item name="btnLogin" type="id" />
+    <item name="etLoginEmail" type="id" />
+    <item name="etLoginPass" type="id" />
+</resources>
