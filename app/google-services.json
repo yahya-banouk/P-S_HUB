@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "657122678453",
-    "project_id": "mobapp-firebase-2f6c2",
-    "storage_bucket": "mobapp-firebase-2f6c2.appspot.com"
+    "project_number": "1047840552061",
+    "firebase_url": "https://sthub-c070a-default-rtdb.firebaseio.com",
+    "project_id": "sthub-c070a",
+    "storage_bucket": "sthub-c070a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:657122678453:android:2c62d45ecb2ef39cf890fc",
+        "mobilesdk_app_id": "1:1047840552061:android:c14bc14b975511a179ad14",
         "android_client_info": {
           "package_name": "com.example.mobapp_firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "657122678453-ieff20r2auub2gn8u939hmlqavfbni87.apps.googleusercontent.com",
+          "client_id": "1047840552061-sge9d4dvarheoek8cekc5v68dd26bi74.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCikSv53pJTqNUOM6V5XwZSnRY_DKO8hdM"
+          "current_key": "AIzaSyDaCnBKeYLAYjKp6_kX9eAqtMgp1ZHR_F4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "657122678453-ieff20r2auub2gn8u939hmlqavfbni87.apps.googleusercontent.com",
+              "client_id": "1047840552061-sge9d4dvarheoek8cekc5v68dd26bi74.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

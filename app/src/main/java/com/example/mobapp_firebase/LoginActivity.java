@@ -1,10 +1,16 @@
 package com.example.mobapp_firebase;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,25 +29,48 @@ public class LoginActivity extends AppCompatActivity {
     EditText etLoginPassword;
     TextView tvRegisterHere;
     Button btnLogin;
+    ImageView imageView ;
+    TextView loginTxt;
+    LinearLayout buttonLinearLayout ;
 
     FirebaseAuth mAuth;
+    //var d'animation
+    Animation topAnim , bottomAnim ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //super.onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN , WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
         etLoginEmail = findViewById(R.id.etLoginEmail);
         etLoginPassword = findViewById(R.id.etLoginPass);
         tvRegisterHere = findViewById(R.id.tvRegisterHere);
         btnLogin = findViewById(R.id.btnLogin);
+        imageView = findViewById(R.id.imageView);
+        loginTxt = findViewById(R.id.loginTxt);
+        buttonLinearLayout = findViewById(R.id.buttonLinearLayout);
 
         mAuth = FirebaseAuth.getInstance();
+
+        //affect animations created to animation variables
+        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
+        // use this animation to animate our view
+        imageView.setAnimation(topAnim);
+        loginTxt.setAnimation(topAnim);
+        etLoginEmail.setAnimation(topAnim);
+        etLoginPassword.setAnimation(bottomAnim);
+        etLoginEmail.setAnimation(bottomAnim);
+
 
         btnLogin.setOnClickListener(view -> loginUser());
         tvRegisterHere.setOnClickListener(view -> {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
+
+
+
     }
 
     private void loginUser(){
