@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,16 +17,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mobapp_firebase.models.MainModel;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnLogOut;
-    FirebaseAuth mAuth;
+    Button btnLogOut,btnDashboard;
+    public  FirebaseAuth mAuth;
     RecyclerView recyclerView;
     MainAdapter mainAdapter ;
+    FloatingActionButton floatingActionButton ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLogOut = findViewById(R.id.btnLogout);
+        btnDashboard =findViewById(R.id.btnDashboard);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -57,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
 
         mainAdapter = new MainAdapter(options);
         recyclerView.setAdapter(mainAdapter);
+
+
+
+        //button d'ajout
+        floatingActionButton=(FloatingActionButton)findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),AddActivity.class));
+            }
+        });
 
 
 
@@ -104,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_login);
             startActivity(new Intent(this, LoginActivity.class));
         });
+        btnDashboard.setOnClickListener(view ->{
+
+            setContentView(R.layout.activity_dashboard);
+            startActivity(new Intent(this, Dashboard.class));
+        });
 
     }
 
@@ -118,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
+            //
+            //
+            // startActivity(new Intent(this, Dashboard.class));
             mainAdapter.startListening();
         }
     }

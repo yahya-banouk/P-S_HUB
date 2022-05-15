@@ -10,7 +10,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:background="@drawable/hubgradientcolor">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img1"
@@ -22,12 +23,13 @@
             app:civ_border_color="#FF000000"/>
         <TextView
             android:id="@+id/nametext"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="student name"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="10dp"/>
         <TextView
@@ -36,7 +38,7 @@
             android:layout_height="wrap_content"
             android:text="course name"
             android:textSize="25sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_toRightOf="@+id/img1"
             android:layout_below="@+id/nametext"
             android:layout_marginLeft="10dp"/>
@@ -46,7 +48,7 @@
             android:layout_height="wrap_content"
             android:text="email id"
             android:textSize="25sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_toRightOf="@+id/img1"
             android:layout_below="@+id/coursetext"
             android:layout_marginLeft="10dp"/>
@@ -63,6 +65,8 @@
                 android:text="Edit"
                 android:textAllCaps="false"
                 android:layout_marginRight="5sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
                 />
 
             <Button
@@ -72,7 +76,12 @@
                 android:text="Delete"
                 android:textAllCaps="false"
                 android:layout_marginLeft="5sp"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
                 />
+
+
 
 
         </LinearLayout>

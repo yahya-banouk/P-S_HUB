@@ -2,8 +2,8 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
      <solid android:color="#FFFFFF" />
     <stroke
-        android:with="10dp"
-        android:color="#2F6699" />
+        android:width="5dp"
+        android:color="@color/pornhubsColor" />
     <corners
         android:radius="10dp"/>
 </shape>

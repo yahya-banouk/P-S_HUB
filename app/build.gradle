@@ -41,6 +41,11 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.google.firebase:firebase-auth:21.0.3'
     implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+
+
 
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
 
