@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MobApp_Firebase</string>
+    <string name="app_name"></string>
     <string name="register">Register</string>
     <string name="register_here">Register here</string>
     <string name="not_registered_yet">Not registered yet</string>

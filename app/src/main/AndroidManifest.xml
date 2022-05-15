@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobApp_Firebase">
         <activity
+            android:name=".Profil"
+            android:exported="false" />
+        <activity
             android:name=".Email"
             android:exported="false" />
         <activity

@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Email"
+    android:background="@drawable/hubgradientcolor"
 
     >
 
@@ -14,10 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Email"
-        android:background="@color/pornhubsColor"
         android:textSize="25dp"
         android:gravity="center"
-        android:textColor="#FFF"
+        android:textColor="@color/pornhubsColor"
         />
 
 
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="20sp"
+        android:textColor="@color/white"
 
         android:text="To"
         />
@@ -34,9 +35,11 @@
         android:id="@+id/et_to"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:textColor="@color/white"
 
-        android:background="@drawable/rounded"
-        android:gravity="center"/>
+        android:background="@drawable/edit_text_background"
+        android:gravity="center"
+        />
 
 
 
@@ -49,14 +52,17 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:text="Subject"
+        android:textColor="@color/white"
         />
     <EditText
         android:id="@+id/et_subject"
         android:layout_width="match_parent"
         android:layout_height="35dp"
+        android:textColor="@color/white"
+
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
+        android:background="@drawable/edit_text_background"
         android:gravity="center"/>
 
     <TextView
@@ -66,6 +72,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
         android:text="messqge"
         />
     <EditText
@@ -73,10 +80,13 @@
         android:hint="write here"
         android:layout_width="match_parent"
         android:layout_height="435dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/rounded"
-        android:gravity="center"/>
+        android:background="@drawable/edit_text_background"
+        android:gravity="center"
+        />
 
     <Button
         android:id="@+id/bt_Send"
@@ -85,9 +95,11 @@
 
         android:layout_marginTop="10dp"
 
-        android:background="@drawable/rounded"
+
+        android:background="@drawable/button_background"
         android:gravity="center"
         android:text="SEND"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="20dp" />
 

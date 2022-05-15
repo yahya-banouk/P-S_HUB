@@ -29,7 +29,8 @@ public class Email extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto: "+et_to.getText().toString()));
                 intent.putExtra(intent.EXTRA_SUBJECT,et_dubject.getText().toString());
                 intent.putExtra(intent.EXTRA_TEXT,et_message.getText().toString());
-                startActivity(intent);
+
+                startActivity(intent.createChooser(intent,"choisir le moyen d'envoie"));
             }
         });
 

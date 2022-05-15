@@ -12,10 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -24,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText etRegPassword;
     TextView tvLoginHere;
     Button btnRegister;
+    EditText name,course,surl;
 
     FirebaseAuth mAuth;
 
@@ -36,6 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
         etRegPassword = findViewById(R.id.etRegPass);
         tvLoginHere = findViewById(R.id.tvLoginHere);
         btnRegister = findViewById(R.id.btnRegister);
+        name =findViewById(R.id.etRegName);
+        course =findViewById(R.id.etRegCourse);
+        surl = findViewById(R.id.etRegSuel);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -72,7 +82,33 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
             });
+            insertData();
         }
     }
 
+
+    private void insertData(){
+        Map<String,Object> map = new HashMap<>();
+        map.put("name", name.getText().toString());
+        map.put("email",  etRegEmail.getText().toString());
+        map.put("course", course.getText().toString());
+        map.put("surl", surl.getText().toString());
+
+
+        FirebaseDatabase.getInstance().getReference().child("students").push()
+                .setValue(map)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(RegisterActivity.this, "Data inserted Successfully.", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(Exception e) {
+                        Toast.makeText(RegisterActivity.this, "Error while insertion", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+    }
 }

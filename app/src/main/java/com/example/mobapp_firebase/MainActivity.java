@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnLogOut,btnDashboard;
+    Button btnLogOut,btnDashboard,btnEmail;
     public  FirebaseAuth mAuth;
     RecyclerView recyclerView;
     MainAdapter mainAdapter ;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogOut = findViewById(R.id.btnLogout);
         btnDashboard =findViewById(R.id.btnDashboard);
+        btnEmail = findViewById(R.id.btnEmail);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -124,6 +125,13 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_dashboard);
             startActivity(new Intent(this, Dashboard.class));
         });
+
+
+        btnEmail.setOnClickListener(view -> {
+            setContentView(R.layout.activity_email);
+            startActivity(new Intent(this, Email.class));
+        });
+
 
     }
 
