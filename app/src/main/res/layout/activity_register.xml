@@ -160,6 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Already registered"
+                android:textColor="@color/white"
                 android:textSize="16sp"/>
 
             <TextView
@@ -168,7 +169,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="Login here"
-                android:textColor="#F5B700"
+
+                android:textColor="@color/pornhubsColor"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
 
